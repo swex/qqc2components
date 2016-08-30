@@ -16,8 +16,8 @@ Text {
     height: size
     readonly property var iconMaps: {"material": MaterialJS.map ,"awesome":AwesomeJS.map,"icomoon":IcomoonJS.map}
     readonly property var fontFamilies:{"material":"Material icons","awesome":"FontAwesome","icomoon":"icomoon"}
-    property string fontFamily:name.split("/")[0]
-    property string iconName: name.split("/")[1]
+    readonly property string fontFamily:name.split("/")[0]
+    readonly property string iconName: name.split("/")[1]
     font.family: fontFamilies[fontFamily]
     horizontalAlignment: Text.AlignHCenter
     verticalAlignment: Text.AlignVCenter
