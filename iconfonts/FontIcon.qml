@@ -4,9 +4,11 @@ import QtQuick.Controls 2.0
 import "material.js" as MaterialJS
 import "awesome.js" as AwesomeJS
 import "icomoon.js" as IcomoonJS
+import qqc2components 1.0
 
 Text {
     id: text
+    readonly property FontAdder fa: FontAdder
     padding:0
     property bool valid: implicitWidth > 0
     property int size: 32
@@ -26,7 +28,6 @@ Text {
     style: shadow ? Text.Raised : Text.Normal
     styleColor: Qt.rgba(0,0,0,0.2)
     font.pixelSize: size
-
     Behavior on color {
         ColorAnimation { duration: 200 }
     }

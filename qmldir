@@ -1,3 +1,5 @@
-FontIcon iconfonts/FontIcon.qml
-FontAdder iconfonts/FontAdder.qml
-CircleButton CircleButton.qml
+module QQC2Components
+FontIcon 1.0 iconfonts/FontIcon.qml
+singleton FontAdder 1.0 iconfonts/FontAdder.qml
+CircleButton 1.0 CircleButton.qml
+NumRectangle 1.0 NumRectangle.qml
