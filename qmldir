@@ -3,3 +3,5 @@ FontIcon 1.0 iconfonts/FontIcon.qml
 singleton FontAdder 1.0 iconfonts/FontAdder.qml
 CircleButton 1.0 CircleButton.qml
 NumRectangle 1.0 NumRectangle.qml
+IconTabButton 1.0 IconTabButton.qml
+singleton Theme 1.0 Theme.qml
