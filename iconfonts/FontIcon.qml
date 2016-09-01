@@ -8,7 +8,7 @@ import qqc2components 1.0
 
 Text {
     id: text
-    readonly property FontAdder fa: FontAdder
+    readonly property bool tellmeIfITrue: FontAdder.amITrue
     padding:0
     property bool valid: implicitWidth > 0
     property int size: 32
