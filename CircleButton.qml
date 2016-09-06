@@ -1,6 +1,7 @@
 import QtQuick 2.7
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.0
+import qqc2components 1.0
 import QtGraphicalEffects 1.0
 
 Button{
@@ -24,7 +25,7 @@ Button{
         NumberAnimation {
             easing.type: Easing.OutQuart;
             alwaysRunToEnd: true;
-            duration:50
+            duration:Theme.transitionsTime
         }
     }
 
