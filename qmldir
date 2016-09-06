@@ -6,3 +6,4 @@ NumRectangle 1.0 NumRectangle.qml
 IconTabButton 1.0 IconTabButton.qml
 singleton Theme 1.0 Theme.qml
 Action 1.0 Action.qml
+singleton Utils 1.0 Utils.qml
