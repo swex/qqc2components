@@ -1,6 +1,6 @@
 import QtQuick 2.7
 import QtQuick.Layouts 1.3
-import QtQuick.Controls 2.0
+import QtQuick.Controls 2.1
 import qqc2components 1.0
 import QtGraphicalEffects 1.0
 
@@ -8,8 +8,8 @@ Button{
     id:button
     transformOrigin: Item.Bottom
     scale: 1
-    width: 48
-    height: 48
+    width: 56
+    height: 56
     property  alias iconName:icon.name
     property color backgroundColor
     property color iconColor

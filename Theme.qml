@@ -2,14 +2,14 @@ pragma Singleton
 import QtQuick 2.7
 import QtQml 2.2
 import Qt.labs.settings 1.0
-import QtQuick.Controls.Material 2.0
+import QtQuick.Controls.Material 2.1
 
 QtObject {
     id:globalTheme
     property color accent: Material.color(Material.DeepOrange)
     property color primary: Material.color(Material.Orange)
     property int theme: Material.Light
-    property color disabled: Qt.lighter(Material.color(Material.Grey),1.1)
+    property color disabled: Material.color(Material.Grey, Material.Shade400)
     property color background:Material.background
     property color foreground:Material.foreground
     property color errorText:Material.color(Material.Red)

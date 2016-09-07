@@ -1,7 +1,7 @@
 import QtQuick 2.7
 import QtQuick.Layouts 1.3
-import QtQuick.Controls 2.0
-import QtQuick.Controls.Material 2.0
+import QtQuick.Controls 2.1
+import QtQuick.Controls.Material 2.1
 import "iconfonts/material.js" as MaterialJS
 import "iconfonts/awesome.js" as AwesomeJS
 import "iconfonts/icomoon.js" as IcomoonJS
