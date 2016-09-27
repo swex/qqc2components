@@ -45,7 +45,7 @@ Button{
         layer.effect: DropShadow {
             verticalOffset: 3
             horizontalOffset: 1
-            color: "lightgrey"
+            color: "#30808080"
             samples: button.pressed ? 20 : 10
             spread: 0.5
         }
