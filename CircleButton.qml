@@ -2,52 +2,36 @@ import QtQuick 2.7
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.1
 import qqc2components 1.0
-import QtGraphicalEffects 1.0
 
-Button{
-    id:button
+RoundButton {
+    id: button
     transformOrigin: Item.Bottom
     scale: 1
-    width: 56
-    height: 56
-    property  alias iconName:icon.name
-    property color backgroundColor
-    property color iconColor
+    radius: 56
+    property alias iconName: icon.name
+    property color backgroundColor: Theme.background
+    property alias iconColor: icon.color
     property Flickable flickable
-    Connections{
-        target:flickable
+
+    Component.onCompleted: background.color = backgroundColor
+
+    Connections {
+        target: flickable
         onMovementStarted: scale = 0
         onMovementEnded: scale = 1
     }
-    padding: Math.max(width,height)/4
-
-    Behavior on scale{
+    Behavior on scale {
         NumberAnimation {
-            easing.type: Easing.OutQuart;
-            alwaysRunToEnd: true;
-            duration:Theme.transitionsTime
+            easing.type: Easing.OutQuart
+            alwaysRunToEnd: true
+            duration: Theme.transitionsTime
         }
     }
 
     contentItem: FontIcon {
-        id:icon
+        id: icon
         name: iconName
-        color: button.iconColor
-        size: background.height/2
-        shadow:true
-    }
-    background:
-        Rectangle {
-        color: button.enabled ? button.backgroundColor:Qt.tint(button.backgroundColor,Qt.rgba(0,0,0,0.2))
-        radius: Math.max(width,height) / 2
-        opacity: button.enabled ? (button.pressed ? 0.75 : 1.0):1
-        layer.enabled: true
-        layer.effect: DropShadow {
-            verticalOffset: 3
-            horizontalOffset: 1
-            color: "#30808080"
-            samples: button.pressed ? 20 : 10
-            spread: 0.5
-        }
+        size: background.height / 2
+        shadow: true
     }
 }
