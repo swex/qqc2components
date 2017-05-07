@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/qqc2components">
+        <file>Action.qml</file>
+        <file>CircleButton.qml</file>
+        <file>example.qml</file>
+        <file>IconTabButton.qml</file>
+        <file>NumRectangle.qml</file>
+        <file>qmldir</file>
+        <file>Theme.qml</file>
+        <file>Utils.qml</file>
+        <file>js/moment-with-locales.js</file>
+        <file>iconfonts/awesome.js</file>
+        <file>iconfonts/FontAdder.qml</file>
+        <file>iconfonts/FontAwesome.otf</file>
+        <file>iconfonts/FontIcon.qml</file>
+        <file>iconfonts/IcoMoon-Free.ttf</file>
+        <file>iconfonts/icomoon.js</file>
+        <file>iconfonts/material.js</file>
+        <file>iconfonts/MaterialIcons-Regular.ttf</file>
+    </qresource>
+</RCC>
