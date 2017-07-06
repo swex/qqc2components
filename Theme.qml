@@ -1,19 +1,19 @@
 pragma Singleton
-import QtQuick 2.7
+import QtQuick 2.9
 import QtQml 2.2
 import Qt.labs.settings 1.0
-import QtQuick.Controls.Material 2.1
+import QtQuick.Controls.Material 2.2
 
 QtObject {
-    id:globalTheme
+    id: globalTheme
     property color accent: Material.color(Material.DeepOrange)
     property color primary: Material.color(Material.Orange)
     property int theme: Material.Light
     property color disabled: Material.color(Material.Grey, Material.Shade400)
-    property color background:Material.background
-    property color foreground:Material.foreground
-    property color errorText:Material.color(Material.Red)
-    property int transitionsTime:200
+    property color background: Material.background
+    property color foreground: Material.foreground
+    property color errorText: Material.color(Material.Red)
+    property int transitionsTime: 200
     readonly property Settings s: Settings {
         property alias accent: globalTheme.accent
         property alias primary: globalTheme.primary
@@ -24,5 +24,7 @@ QtObject {
         property alias errorTextColor: globalTheme.errorText
         property alias transitionsTime: globalTheme.transitionsTime
     }
-    Component.onCompleted: {console.log("Theme initialized")}
+    Component.onCompleted: {
+        console.log("Theme initialized")
+    }
 }
