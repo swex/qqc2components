@@ -2,38 +2,20 @@ import QtQuick 2.9
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.2
 import QtQuick.Controls.Material 2.2
-import "iconfonts/material.js" as MaterialJS
-import "iconfonts/awesome.js" as AwesomeJS
-import "iconfonts/icomoon.js" as IcomoonJS
-import "."
+import qqc2components 1.0
 
 ApplicationWindow {
     visible: true
     property var iconsModel: []
     width: 360
     height: 520
-    readonly property var iconMaps: ({
-                                         material: MaterialJS.map,
-                                         awesome: AwesomeJS.map,
-                                         icomoon: IcomoonJS.map
-                                     })
-
     Component.onCompleted: {
-        for (var family in iconMaps) {
-            for (var key in iconMaps[family]) {
+        for (var family in FontAdder.iconMaps) {
+            for (var key in FontAdder.iconMaps[family]) {
                 iconsModel.push(family + "/" + key)
             }
         }
         grid.model = iconsModel
-    }
-    FontLoader {
-        source: "iconfonts/FontAwesome.otf"
-    }
-    FontLoader {
-        source: "iconfonts/IcoMoon-Free.ttf"
-    }
-    FontLoader {
-        source: "iconfonts/MaterialIcons-Regular.ttf"
     }
     ColumnLayout {
         anchors.fill: parent
@@ -97,7 +79,6 @@ ApplicationWindow {
             }
             ScrollBar.vertical: ScrollBar {
             }
-        }
         }
     }
 }

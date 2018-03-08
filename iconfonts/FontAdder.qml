@@ -16,9 +16,7 @@ QtObject {
         source: "MaterialIcons-Regular.ttf"
     }
     readonly property bool amITrue: true
-    Component.onCompleted: {
-        console.log("IconFonts added ")
-    }
+
     readonly property var iconMaps: ({
                                          material: MaterialJS.map,
                                          awesome: AwesomeJS.map,
@@ -29,4 +27,7 @@ QtObject {
                                              awesome: "FontAwesome",
                                              icomoon: "icomoon"
                                          })
+    Component.onCompleted: {
+        console.log("IconFonts added ")
+    }
 }

@@ -26,7 +26,7 @@ TabButton {
                 Layout.alignment: Qt.AlignHCenter
                 Layout.preferredWidth: size
                 color: index === _tabBar.currentIndex ? Theme.accent : Theme.disabled
-                size: 32
+                width: 32
                 name: iconString
                 shadow: true
             }
