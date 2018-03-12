@@ -11,14 +11,14 @@ Text {
     property bool shadow: false
     width: implicitWidth
     height: implicitHeight
-    readonly property string fontFamily: name.split("/")[0]
-    readonly property string iconName: name.split("/")[1]
-    font.family: FontAdder.fontFamilies[fontFamily]
+    readonly property string fontFamily: name ? name.split("/")[0] : null
+    readonly property string iconName: name ? name.split("/")[1] : null
+    font.family: fontFamily ? FontAdder.fontFamilies[fontFamily] : null
     horizontalAlignment: Text.AlignHCenter
     verticalAlignment: Text.AlignVCenter
     font.weight: Font.Light
-    text: FontAdder.iconMaps[fontFamily].hasOwnProperty(
-              iconName) ? FontAdder.iconMaps[fontFamily][iconName] : ""
+    text: fontFamily ? (FontAdder.iconMaps[fontFamily].hasOwnProperty(
+                            iconName) ? FontAdder.iconMaps[fontFamily][iconName] : "") : null
     style: shadow ? Text.Raised : Text.Normal
     styleColor: Qt.rgba(0, 0, 0, 0.2)
     font.pixelSize: width
