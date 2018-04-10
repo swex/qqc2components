@@ -1,5 +1,5 @@
 pragma Singleton
-import QtQuick 2.9
+import QtQuick 2.10
 import QtQml 2.2
 import "js/moment-with-locales.js" as SingleMoment
 
