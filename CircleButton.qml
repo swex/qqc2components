@@ -8,11 +8,15 @@ RoundButton {
     transformOrigin: Item.Bottom
     scale: 1
     radius: 56
-    property alias iconName: icon.name
+    property string iconName
+    property alias name: button.iconName
     property color backgroundColor: Theme.background
-    property alias iconColor: icon.color
+    property color iconColor
+    onIconChanged: if (iconColor) {
+                       contentItem.color = iconColor
+                   }
+    font.pixelSize: width * (3 / 4)
     property Flickable flickable
-
     Component.onCompleted: background.color = backgroundColor
 
     Connections {
@@ -27,11 +31,10 @@ RoundButton {
             duration: Theme.transitionsTime
         }
     }
+    readonly property string _fontFamily: name ? name.split("/")[0] : null
+    readonly property string _iconName: name ? name.split("/")[1] : null
+    font.family: _fontFamily ? FontAdder.fontFamilies[_fontFamily] : null
 
-    contentItem: FontIcon {
-        id: icon
-        name: iconName
-        width: background.height / 2
-        shadow: true
-    }
+    text: _fontFamily ? (FontAdder.iconMaps[_fontFamily].hasOwnProperty(
+                             _iconName) ? FontAdder.iconMaps[_fontFamily][_iconName] : "") : null
 }

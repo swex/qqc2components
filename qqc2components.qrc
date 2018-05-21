@@ -17,5 +17,7 @@
         <file>iconfonts/icomoon.js</file>
         <file>iconfonts/material.js</file>
         <file>iconfonts/MaterialIcons-Regular.ttf</file>
+        <file>IconToolButton.qml</file>
+        <file>IconRoundButton.qml</file>
     </qresource>
 </RCC>

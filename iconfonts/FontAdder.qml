@@ -1,6 +1,6 @@
 pragma Singleton
 import QtQuick 2.10
-import QtQml 2.2
+import QtQml 2.3
 import "material.js" as MaterialJS
 import "awesome.js" as AwesomeJS
 import "icomoon.js" as IcomoonJS
@@ -27,6 +27,7 @@ QtObject {
                                              awesome: "FontAwesome",
                                              icomoon: "icomoon"
                                          })
+
     Component.onCompleted: {
         console.log("IconFonts added ")
     }
