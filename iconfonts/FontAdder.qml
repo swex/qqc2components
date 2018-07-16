@@ -18,14 +18,15 @@ QtObject {
     readonly property bool amITrue: true
 
     readonly property var iconMaps: ({
-                                         material: MaterialJS.map,
-                                         awesome: AwesomeJS.map,
-                                         icomoon: IcomoonJS.map
+                                         "material": MaterialJS.map,
+                                         "awesome": AwesomeJS.map,
+                                         "icomoon": IcomoonJS.map
                                      })
+    readonly property var material: MaterialJS.map
     readonly property var fontFamilies: ({
-                                             material: "Material icons",
-                                             awesome: "FontAwesome",
-                                             icomoon: "icomoon"
+                                             "material": "Material icons",
+                                             "awesome": "FontAwesome",
+                                             "icomoon": "icomoon"
                                          })
 
     Component.onCompleted: {
