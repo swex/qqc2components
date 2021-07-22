@@ -1,11 +1,10 @@
 module QQC2Components
 FontIcon 1.0 iconfonts/FontIcon.qml
 singleton FontAdder 1.0 iconfonts/FontAdder.qml
-CircleButton 1.0 CircleButton.qml
 NumRectangle 1.0 NumRectangle.qml
 IconTabButton 1.0 IconTabButton.qml
 singleton Theme 1.0 Theme.qml
-Action 1.0 Action.qml
 IconToolButton 1.0 IconToolButton.qml
 IconRoundButton 1.0 IconRoundButton.qml
+CircleButton 1.0 CircleButton.qml
 singleton Utils 1.0 Utils.qml

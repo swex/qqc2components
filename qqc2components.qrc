@@ -1,7 +1,5 @@
 <RCC>
     <qresource prefix="/qqc2components">
-        <file>Action.qml</file>
-        <file>CircleButton.qml</file>
         <file>example.qml</file>
         <file>IconTabButton.qml</file>
         <file>NumRectangle.qml</file>
@@ -19,5 +17,6 @@
         <file>iconfonts/MaterialIcons-Regular.ttf</file>
         <file>IconToolButton.qml</file>
         <file>IconRoundButton.qml</file>
+        <file>CircleButton.qml</file>
     </qresource>
 </RCC>

@@ -1,18 +1,19 @@
 pragma Singleton
-import QtQuick 2.11
-import QtQml 2.11
+
+import QtQuick 2.12
+import QtQml 2.12
 import "material.js" as MaterialJS
 import "awesome.js" as AwesomeJS
 import "icomoon.js" as IcomoonJS
 
 QtObject {
-    readonly property FontLoader fontAwesome: FontLoader {
+    property FontLoader fontAwesome: {
         source: "FontAwesome.otf"
     }
-    readonly property FontLoader fontIcoMoon: FontLoader {
+    property FontLoader fontIcoMoon: FontLoader {
         source: "IcoMoon-Free.ttf"
     }
-    readonly property FontLoader fontMaterial: FontLoader {
+    property FontLoader fontMaterial: FontLoader {
         source: "MaterialIcons-Regular.ttf"
     }
     readonly property bool amITrue: true
